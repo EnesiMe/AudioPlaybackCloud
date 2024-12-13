@@ -129,7 +129,7 @@ void upload_audio_to_cloud(int16_t *audio_data, size_t size) {
     esp_base64_encode((const unsigned char *)audio_data, size * sizeof(int16_t), base64_audio, &out_len);
 
     esp_http_client_config_t config = {
-        .url = "https://storage.googleapis.com/YOUR_BUCKET_NAME/upload",
+        .url = "https://script.google.com/macros/s/AKfycbyJEgBu_YFu2q3H1gXqBydhXsCowDv1_UZp3jGs2s8dtSWfsW6i6aoGMU4ceR-Xvx02/exec",
         .method = HTTP_METHOD_POST,
     };
     esp_http_client_handle_t client = esp_http_client_init(&config);
